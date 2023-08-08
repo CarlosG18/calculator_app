@@ -32,6 +32,37 @@
 --Very_dark_grayish_blue: hsl(221, 14%, 31%);
 --White: hsl(0, 0%, 100%);
 
+
+/* Theme2 */ 
+--Light_gray: hsl(0, 0%, 90%);
+--Grayish_red_togglebackgroundkeypadbackground: hsl(0, 5%, 81%);
+--Very_light_gray: hsl(0, 0%, 93%);
+
+/* key */
+--Dark_moderate_cyan_key_background: hsl(185, 42%, 37%);
+--Very_dark_cyan_key_shadow: hsl(185, 58%, 25%);
+--Orange_key_background_toggle: hsl(25, 98%, 40%);
+--Dark_orange_key_shadow: hsl(25, 99%, 27%);
+--Light_grayish_yellow_key_background: hsl(45, 7%, 89%);
+--Dark_grayish_orange_key_shadow: hsl(35, 11%, 61%);
+
+
+--text2: hsl(60, 10%, 19%);
+
+/* Theme3 */ 
+--Very_dark_violet1: hsl(268, 75%, 9%);
+--Very_dark_violet2: hsl(268, 71%, 12%);
+
+/* key */
+--Dark_violet_key_background: hsl(281, 89%, 26%);
+--Vivid_magenta_key_shadow: hsl(285, 91%, 52%);
+--Pure_cyan_key_background_toggle: hsl(176, 100%, 44%);
+--Soft_cyan_key_shadow: hsl(177, 92%, 70%);
+--Very_dark_violet_key_background: hsl(268, 47%, 21%);
+--Dark_magenta_key_shadow: hsl(290, 70%, 36%);
+
+--text3: hsl(52, 100%, 62%);
+
 /* typography */
 --font: 'League Spartan', sans-serif;
 }
@@ -41,10 +72,33 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
     font-size: 32px;
     font-family: var(--font);
+    transition: all 0.7s;
+}
+
+.theme1{
     background-color: var(--Very_dark_desaturated_blue_1);
+}
+
+.theme2{
+    background-color: var(--Light_gray);
+}
+
+.theme3{
+    background-color: var(--Very_dark_violet1);
+}
+
+.p-theme1{
+    color: var(--White);
+}
+
+.p-theme2{
+    color: var(--text2);
+}
+
+.p-theme3{
+    color: var(--text3);
 }
 
 .calculator{
@@ -52,6 +106,8 @@ body{
     flex-direction: column;
     gap: 20px;
     max-width: 480px;
+    margin: 10px 20px 50px 20px;
+    transition: all 0.5s;
 }
 
 .calculator-header{
@@ -85,7 +141,6 @@ body{
 
 .calculator-visor{
     height: 100px;
-    background-color: var(--Very_dark_desaturated_blue_3);
     border-radius: 10px;
     padding: 20px;
     display: flex;
@@ -93,6 +148,20 @@ body{
     align-items: center;
     color: var(--White);
     font-size: 60px;
+    overflow-x: auto;
+    transition: all 0.7s;
+}
+
+.calculator-visor-theme1{
+    background-color: var(--Very_dark_desaturated_blue_3);
+}
+
+.calculator-visor-theme2{
+    background-color: var(--Very_light_gray);
+}
+
+.calculator-visor-theme3{
+    background-color: var(--Very_dark_violet2);
 }
 
 .container-circle{
@@ -103,37 +172,83 @@ body{
     border-radius: 22px;
 }
 
+.container-circle:hover{
+    cursor: pointer;
+}
+
 .circle{
     position: absolute;
-    inset: 3.75px 3.75px;
     width: 17.5px;
     height:17.5px;
     border-radius: 50%;
     background-color: var(--Red);
+    transition: all 0.7s;
+}
+
+.position1{
+    inset: 3.75px 3.75px;
+}
+
+.position2{
+    inset: 3.75px 50%;
+    transform: translateX(-50%);
+}
+
+.position3{
+    inset: 3.75px 100%;
+    transform: translateX(calc(-100% - 3.75px));
 }
 
 
 .calculator-keyboard{
     display: flex;
+    justify-content: space-evenly;
     gap: 20px;
     flex-flow: row wrap;
-    background-color: var(--Very_dark_desaturated_blue_2);
     border-radius: 10px;
     padding: 20px;
+    transition: all 0.7s;
+}
+
+.calculator-keyboard-theme1{
+    background-color: var(--Very_dark_desaturated_blue_2);
+}
+
+.calculator-keyboard-theme2{
+    background-color: var(--Dark_moderate_cyan_key_background);
+}
+
+.calculator-keyboard-theme3{
+    background-color: var(--Dark_violet_key_background);
 }
 
 .key{
     text-align: center;
-    flex-basis: calc((100% - (3 * 20px)) / 4);
+    width: 90px;
     padding: 15px 25px;
     background-color: var(--Light_grayish_orange);
     border-radius: 10px;
     box-shadow: 0 4px 2px var(--Grayish_orange);
 }
 
+.key:hover{
+    cursor: pointer;
+}
+
+.key-theme1{
+    background-color: var(--Light_grayish_orange);
+}
+
+.key-theme2{
+    background-color: var();
+}
+
+.key-theme3{
+    background-color: var();
+}
+
 .extra{
-    flex-grow: 1;
-    text-align: center;
+    flex-grow: 2;
 }
 
 .attribution { 
@@ -144,6 +259,26 @@ body{
     color: hsl(228, 45%, 44%); 
 }
 
+@media (max-width: 700px) {
+    .calculator{
+        max-width: 405px;
+    }
+    .calculator-keyboard{
+        gap: 15px;
+    }
+
+    .key{
+        width: 80px;
+    }
+}
+
 @media (max-width: 375px) {
-    
+    .calculator-keyboard{
+        gap: 10px;
+    }
+
+    .key{
+        text-align: center;
+        width: 60px;
+    }
 }
