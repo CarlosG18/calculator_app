@@ -4,101 +4,16 @@
     box-sizing: border-box;
 }
 
-:root{
-/* Theme 1 */
-    
-/* backgrounds */
---Very_dark_desaturated_blue_1: hsl(222, 26%, 31%);
-/* (toggle background, keypad background) */
---Very_dark_desaturated_blue_2: hsl(223, 31%, 20%);
-/* (screen background) */
---Very_dark_desaturated_blue_3: hsl(224, 36%, 15%);
-
-/* keys */
-/* (key background) */
---Desaturated_dark_blue_1: hsl(225, 21%, 49%);
-/* (key shadow) */
---Desaturated_dark_blue_2: hsl(224, 28%, 35%);
-/* (key background, toggle) */
---Red: hsl(6, 63%, 50%);
-/* (key shadow) */
---Dark_red: hsl(6, 70%, 34%);
-/* (key background) */
---Light_grayish_orange: hsl(30, 25%, 89%);
-/* (key shadow) */
---Grayish_orange: hsl(28, 16%, 65%);
-
-/* text */
---Very_dark_grayish_blue: hsl(221, 14%, 31%);
---White: hsl(0, 0%, 100%);
-
-
-/* Theme2 */ 
---Light_gray: hsl(0, 0%, 90%);
---Grayish_red_togglebackgroundkeypadbackground: hsl(0, 5%, 81%);
---Very_light_gray: hsl(0, 0%, 93%);
-
-/* key */
---Dark_moderate_cyan_key_background: hsl(185, 42%, 37%);
---Very_dark_cyan_key_shadow: hsl(185, 58%, 25%);
---Orange_key_background_toggle: hsl(25, 98%, 40%);
---Dark_orange_key_shadow: hsl(25, 99%, 27%);
---Light_grayish_yellow_key_background: hsl(45, 7%, 89%);
---Dark_grayish_orange_key_shadow: hsl(35, 11%, 61%);
-
-
---text2: hsl(60, 10%, 19%);
-
-/* Theme3 */ 
---Very_dark_violet1: hsl(268, 75%, 9%);
---Very_dark_violet2: hsl(268, 71%, 12%);
-
-/* key */
---Dark_violet_key_background: hsl(281, 89%, 26%);
---Vivid_magenta_key_shadow: hsl(285, 91%, 52%);
---Pure_cyan_key_background_toggle: hsl(176, 100%, 44%);
---Soft_cyan_key_shadow: hsl(177, 92%, 70%);
---Very_dark_violet_key_background: hsl(268, 47%, 21%);
---Dark_magenta_key_shadow: hsl(290, 70%, 36%);
-
---text3: hsl(52, 100%, 62%);
-
-/* typography */
---font: 'League Spartan', sans-serif;
-}
-
 body{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     font-size: 32px;
-    font-family: var(--font);
-    transition: all 0.7s;
-}
-
-.theme1{
-    background-color: var(--Very_dark_desaturated_blue_1);
-}
-
-.theme2{
-    background-color: var(--Light_gray);
-}
-
-.theme3{
-    background-color: var(--Very_dark_violet1);
-}
-
-.p-theme1{
-    color: var(--White);
-}
-
-.p-theme2{
-    color: var(--text2);
-}
-
-.p-theme3{
-    color: var(--text3);
+    font-family: 'League Spartan', sans-serif;
+    color: hsl(221, 14%, 31%);
+    transition: background-color 0.7s;
+    background-color: #3a4764;
 }
 
 .calculator{
@@ -150,25 +65,14 @@ body{
     font-size: 60px;
     overflow-x: auto;
     transition: all 0.7s;
-}
-
-.calculator-visor-theme1{
-    background-color: var(--Very_dark_desaturated_blue_3);
-}
-
-.calculator-visor-theme2{
-    background-color: var(--Very_light_gray);
-}
-
-.calculator-visor-theme3{
-    background-color: var(--Very_dark_violet2);
+    background-color: hsl(224, 36%, 15%);
 }
 
 .container-circle{
     position: relative;
     height: 25px;
     width: 80px;
-    background-color: var(--Very_dark_desaturated_blue_3);
+    background-color: hsl(223, 31%, 20%);
     border-radius: 22px;
 }
 
@@ -181,7 +85,7 @@ body{
     width: 17.5px;
     height:17.5px;
     border-radius: 50%;
-    background-color: var(--Red);
+    background-color: hsl(6, 63%, 50%);
     transition: all 0.7s;
 }
 
@@ -208,43 +112,36 @@ body{
     border-radius: 10px;
     padding: 20px;
     transition: all 0.7s;
-}
-
-.calculator-keyboard-theme1{
-    background-color: var(--Very_dark_desaturated_blue_2);
-}
-
-.calculator-keyboard-theme2{
-    background-color: var(--Dark_moderate_cyan_key_background);
-}
-
-.calculator-keyboard-theme3{
-    background-color: var(--Dark_violet_key_background);
+    background-color: hsl(223, 31%, 20%);
 }
 
 .key{
     text-align: center;
     width: 90px;
     padding: 15px 25px;
-    background-color: var(--Light_grayish_orange);
     border-radius: 10px;
-    box-shadow: 0 4px 2px var(--Grayish_orange);
+}
+
+.text-cor{
+  color: hsl(0, 0%, 100%);
 }
 
 .key:hover{
     cursor: pointer;
+    box-shadow: none;
 }
 
-.key-theme1{
-    background-color: var(--Light_grayish_orange);
+.cor-neutral{
+  background-color: hsl(30, 25%, 89%);
+  box-shadow: 0 4px 1px hsl(28, 16%, 65%);
 }
 
-.key-theme2{
-    background-color: var();
+.cor1{
+  background-color: hsl(225, 21%, 49%);
 }
 
-.key-theme3{
-    background-color: var();
+.cor2{
+  background-color: hsl(6, 63%, 50%);
 }
 
 .extra{
@@ -281,4 +178,11 @@ body{
         text-align: center;
         width: 60px;
     }
+    
+    .key{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
 }

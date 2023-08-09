@@ -125,7 +125,7 @@ class Calculator{
                 this.operation[i].resultado = this.divisao(this.operation[i].valor_a, this.operation[i].valor_b)
             }
             if(this.operation[i].operation == "subtracao"){
-                this.operation[i].resultado = this.soma(this.operation[i].valor_a, this.operation[i].valor_b)
+                this.operation[i].resultado = this.subtracao(this.operation[i].valor_a, this.operation[i].valor_b)
             }
             
             if(i+1 < this.operation.length){
