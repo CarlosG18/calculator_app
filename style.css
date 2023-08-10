@@ -58,12 +58,10 @@ body{
     height: 100px;
     border-radius: 10px;
     padding: 20px;
-    display: flex;
-    justify-content: end;
-    align-items: center;
+    text-align: end;
     color: var(--White);
     font-size: 60px;
-    overflow-x: auto;
+    overflow: auto;
     transition: all 0.7s;
     background-color: hsl(224, 36%, 15%);
 }
