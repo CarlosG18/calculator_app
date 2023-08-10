@@ -116,6 +116,11 @@ body{
 }
 
 .key{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 32px;
     text-align: center;
     width: 90px;
     padding: 15px 25px;
@@ -128,7 +133,12 @@ body{
 
 .key:hover{
     cursor: pointer;
+    opacity: 0.8;
     box-shadow: none;
+}
+
+.color-white{
+    color: white;
 }
 
 .cor-neutral{
@@ -138,10 +148,12 @@ body{
 
 .cor1{
   background-color: hsl(225, 21%, 49%);
+  box-shadow: 0 4px 1px hsl(224, 28%, 35%);
 }
 
 .cor2{
-  background-color: hsl(6, 63%, 50%);
+  background-color: hsl(6, 63%, 50%);  
+  box-shadow: 0 4px 1px hsl(6, 70%, 34%);
 }
 
 .extra{
@@ -178,11 +190,4 @@ body{
         text-align: center;
         width: 60px;
     }
-    
-    .key{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    
 }
